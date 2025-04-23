@@ -8,4 +8,6 @@ These functions can be called with BIDS-wrappers (the functions named `bids_*`) 
 
 ## Installation
 
-In the Environment tab of the Matlab window, click on `Add-ons` > `Get Add-ons` and search for "MP2RAGE". In the Add-On Explorer, click on `Add` and follow the instructions. Alternatively, you can download (and unzip) the data yourself, and add the path or double click the `MP2RAGE.mltbx` file in the Matlab File/Folder panel
+In the Environment tab of the Matlab window, click on `Add-ons` > `Get Add-ons` and search for "MP2RAGE". In the Add-On Explorer, navigate to the toolbox and click on `Add` and follow the instructions. For `here <https://nl.mathworks.com/help/matlab/matlab_env/get-add-ons.html>`__ more information.
+
+Alternatively, you can `download <https://github.com/Donders-Institute/MP2RAGE-related-scripts/releases>`__ the MP2RAGE toolbox file yourzelf, and double click the `MP2RAGE.mltbx` file from within the Matlab File/Folder panel.
