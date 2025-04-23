@@ -23,6 +23,8 @@ $RECYCLE.BIN/
 resources/
 *.asv
 MP2RAGErelatedscripts.prj
+MP2RAGE.mltbx
+MP2RAGE.prj
 
 # =========================
 # Operating System Files
