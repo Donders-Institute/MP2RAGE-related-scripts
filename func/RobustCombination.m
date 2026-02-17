@@ -112,7 +112,11 @@ end
 
 while ~strcmpi(FinalChoice, 'y')
     
-    noiselevel = multiplyingFactor*mean(mean(mean(INV2img(1:end, end-10:end, end-10:end))));
+   if mean(mean(mean(INV2img(1:end, end-10:end, end-10:end))))~=0 
+        noiselevel = multiplyingFactor*mean(mean(mean(INV2img(1:end, end-10:end, end-10:end))));
+    else
+        noiselevel = multiplyingFactor;
+    end
     
     % MP2RAGEimgRobustScanner = MP2RAGErobustfunc(INV1img, INV2img, noiselevel.^2);
     MP2RAGEimgRobustPhaseSensitive = MP2RAGErobustfunc(INV1final, INV2img, noiselevel.^2);
