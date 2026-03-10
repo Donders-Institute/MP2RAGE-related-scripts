@@ -58,4 +58,8 @@ addpath(genpath('.'))
 % if using the fingerprinting approach to compute  R1 and Proton density maps
 INV1          = load_untouch_nii('MP2RAGE_INV1.nii');
 INV2          = load_untouch_nii('MP2RAGE_INV2.nii');
-[T1, PD, R1] = MP2RAGE_dictionaryMatching(MP2RAGE, INV1.img,INV2.img,B1.img, [0.002, 0.005], 1, B1.img ~= 0);
+PD = INV1;
+R1 = INV1;
+[~, PD.img, R1.img] = MP2RAGE_dictionaryMatching(MP2RAGE, INV1.img,INV2.img,B1.img, [0.002, 0.005], 1, B1.img ~= 0);
+save_untouch_nii(PD, 'PDfingerprint.nii')
+save_untouch_nii(R1, 'R1fingerprint.nii')
