@@ -54,4 +54,8 @@ addpath(genpath('.'))
     % Saving the data
     save_untouch_nii(MP2RAGEcorr, 'MP2RAGEcorr.nii')
     save_untouch_nii(T1corrected, 'T1corrected.nii')
-    
+
+% if using the fingerprinting approach to compute  R1 and Proton density maps
+INV1          = load_untouch_nii('MP2RAGE_INV1.nii');
+INV2          = load_untouch_nii('MP2RAGE_INV2.nii');
+[T1, PD, R1] = MP2RAGE_dictionaryMatching(MP2RAGE, INV1.img,INV2.img,B1.img, [0.002, 0.005], 1, B1.img ~= 0);
